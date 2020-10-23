@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
     taskLi.appendChild(button)
     count += 1
   }
-
   const newTask = document.getElementById('create-task-form')
   const taskDesc = document.getElementById('new-task-description')
   newTask.addEventListener("submit", function(e) {
@@ -21,10 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
       addTaskLi(taskDesc.value)
       e.target.reset()
   });
-
   const taskUl = document.getElementById('tasks');
   taskUl.addEventListener("click", (e) => {
       e.target.parentNode.remove();
   });
-
 });
